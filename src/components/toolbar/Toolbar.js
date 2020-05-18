@@ -1,4 +1,4 @@
-import {ExcelComponent} from '@core/ExcelComponent';
+import {ExcelComponent} from '@core/ExcelComponent'
 
 export class Toolbar extends ExcelComponent {
   static className = 'excel__toolbar'
@@ -7,14 +7,13 @@ export class Toolbar extends ExcelComponent {
     super($root, {
       name: 'Toolbar',
       listeners: ['click']
-    });
+    })
   }
 
-  toHtmL() {
+  toHTML() {
     return `
       <div class="button">
-        <i class="material-icons">
-          format_align_left</i>
+        <i class="material-icons">format_align_left</i>
       </div>
 
       <div class="button">
@@ -22,8 +21,7 @@ export class Toolbar extends ExcelComponent {
       </div>
 
       <div class="button">
-        <i class="material-icons">format_align_right
-        </i>
+        <i class="material-icons">format_align_right</i>
       </div>
 
       <div class="button">

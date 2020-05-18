@@ -1,4 +1,4 @@
-import $ from '@core/dom';
+import {$} from '@core/dom'
 
 export class Excel {
   constructor(selector, options) {
@@ -14,17 +14,19 @@ export class Excel {
       const component = new Component($el)
       // // DEBUG
       // if (component.name) {
-      //   window['c'+component.name] = component
+      //   window['c' + component.name] = component
       // }
-
-      $el.html(component.toHtmL())
+      $el.html(component.toHTML())
       $root.append($el)
       return component
     })
+
     return $root
   }
+
   render() {
     this.$el.append(this.getRoot())
+
     this.components.forEach(component => component.init())
   }
 }
